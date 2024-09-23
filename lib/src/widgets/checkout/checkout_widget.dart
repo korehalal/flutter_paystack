@@ -188,7 +188,7 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
               Text(
                 'Pay',
                 style: TextStyle(
-                    fontSize: 14.0, color: context.textTheme().headline1?.color),
+                    fontSize: 14.0, color: context.textTheme().displayLarge?.color),
               ),
               SizedBox(
                 width: 5.0,
@@ -197,7 +197,7 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
                   child: Text(Utils.formatAmount(_charge.amount),
                       style: TextStyle(
                           fontSize: 15.0,
-                          color: context.textTheme().headline6?.color,
+                          color: context.textTheme().titleLarge?.color,
                           fontWeight: FontWeight.bold)))
             ],
           )
@@ -242,13 +242,13 @@ class _CheckoutWidgetState extends BaseState<CheckoutWidget>
       duration: const Duration(milliseconds: 300),
       curve: Curves.fastOutSlowIn,
       child: new Container(
-        color: context.colorScheme().background.withOpacity(0.5),
+        color: context.colorScheme().surface.withOpacity(0.5),
         height: _tabHeight,
         alignment: Alignment.center,
         child: new TabBar(
           controller: _tabController,
           isScrollable: true,
-          unselectedLabelColor: context.colorScheme().onBackground,
+          unselectedLabelColor: context.colorScheme().onSurface,
           labelColor: accentColor,
           labelStyle:
               new TextStyle(fontSize: 14.0, fontWeight: FontWeight.w500),
